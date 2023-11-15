@@ -25,10 +25,14 @@ public class iGrafica {
 
         // Pedir la edad
         String edadStr = JOptionPane.showInputDialog("Ingrese su edad:");
-        int edad = Integer.parseInt(edadStr);
+        int edad = Integer.parseInt(edadStr
+                
+        String idStr = JOptionPane.showInputDialog("Ingrese su id:");
+        int idint = Integer.parseInt(idStr);
+
 
         // Crear un objeto Persona y agregarlo a la lista
-        Integrante nuevoIntegrante = new Integrante(nombre, nombre, edad, edad);
+        Integrante nuevoIntegrante = new Integrante(nombre, sexo, edad, idint);
         listaIntegrantes.add(nuevoIntegrante);
     }
 

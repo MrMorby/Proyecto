@@ -9,7 +9,7 @@ public class Integrante {
     private String Nombre;
     private String sexo;
     private int numero;
-    private int id;
+    private int idint;
 
     public Integrante() {
     }
@@ -18,7 +18,7 @@ public class Integrante {
         this.Nombre = Nombre;
         this.sexo = sexo;
         this.numero = numero;
-        this.id = id;
+        this.idint = id;
     }
 
     public String getNombre() {
@@ -46,16 +46,16 @@ public class Integrante {
     }
 
     public int getId() {
-        return id;
+        return idint;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.idint = id;
     }
 
     @Override
     public String toString() {
-        return "Integrante{" + "Nombre=" + Nombre + ", sexo=" + sexo + ", numero=" + numero + ", id=" + id + '}';
+        return "Integrante{" + "Nombre=" + Nombre + ", sexo=" + sexo + ", numero=" + numero + ", idint=" + idint + '}';
     }
     
     
