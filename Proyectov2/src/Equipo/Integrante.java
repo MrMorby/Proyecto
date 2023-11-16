@@ -8,16 +8,16 @@ public class Integrante {
     
     private String Nombre;
     private String sexo;
-    private int numero;
+    private int edad;
     private int idint;
 
     public Integrante() {
     }
 
-    public Integrante(String Nombre, String sexo, int numero, int id) {
+    public Integrante(String Nombre, String sexo, int edad, int id) {
         this.Nombre = Nombre;
         this.sexo = sexo;
-        this.numero = numero;
+        this.edad = edad;
         this.idint = id;
     }
 
@@ -38,11 +38,11 @@ public class Integrante {
     }
 
     public int getNumero() {
-        return numero;
+        return edad;
     }
 
     public void setNumero(int numero) {
-        this.numero = numero;
+        this.edad = numero;
     }
 
     public int getId() {
@@ -55,7 +55,7 @@ public class Integrante {
 
     @Override
     public String toString() {
-        return "Integrante{" + "Nombre=" + Nombre + ", sexo=" + sexo + ", numero=" + numero + ", idint=" + idint + '}';
+        return "Integrante {" + "Nombre=" + Nombre + ", \n Sexo=" + sexo + ", Edad=" + edad + ", ID=" + idint + '}';
     }
     
     

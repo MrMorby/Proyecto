@@ -52,7 +52,7 @@ public class Interfaz extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 233, Short.MAX_VALUE)
+                .addGap(0, 239, Short.MAX_VALUE)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(220, 220, 220))
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -96,13 +96,19 @@ public class Interfaz extends javax.swing.JFrame {
         if (nombre.equalsIgnoreCase("fin")) {
             break;
         }
+        // pedir el sexo
+        String sexoStr = JOptionPane.showInputDialog("Ingrese su sexo:");
+        String sexo = Integer.parseString(sexoStr);
 
         // Pedir la edad
         String edadStr = JOptionPane.showInputDialog("Ingrese su edad:");
         int edad = Integer.parseInt(edadStr);
+        // pedir el id
+        String idStr = JOptionPane.showInputDialog("Ingrese su id:");
+        int idint = Integer.parseInt(idStr);
 
         // Crear un objeto Persona y agregarlo a la lista
-        Integrante nuevoIntegrante = new Integrante(nombre, nombre, edad, edad);
+        Integrante nuevoIntegrante = new Integrante(nombre, sexoStr, edad, idint);
         listaIntegrantes.add(nuevoIntegrante);
     }
 
