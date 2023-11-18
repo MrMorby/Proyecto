@@ -12,8 +12,7 @@ import javax.swing.JOptionPane;
  * @author taurusbasilisk < at twitch.tv/taurusbsilisk >
  */
 public class iGrafica {
-    
-    public static void main(String[] args) {
+    {
     ArrayList<Integrante> listaIntegrantes = new ArrayList<>();
     while (true) {
         String nombre = JOptionPane.showInputDialog("Ingrese su nombre (o 'fin' para salir):");
@@ -27,14 +26,13 @@ public class iGrafica {
         String edadStr = JOptionPane.showInputDialog("Ingrese su edad:");
         int edad = Integer.parseInt(edadStr);
                 
-        String sexoStr = JOptionPane.showInputDialog("Ingrese su sexo:");
-        String sexo = Integer.parseString(sexoStr);
+        String sexo = JOptionPane.showInputDialog("Ingrese su sexo:");
         
         String idStr = JOptionPane.showInputDialog("Ingrese su id:");
         int id = Integer.parseInt(idStr);
 
         // Crear un objeto Persona y agregarlo a la lista
-        Integrante nuevoIntegrante = new Integrante(nombre, sexoStr, edad, id);
+        Integrante nuevoIntegrante = new Integrante(nombre, sexo, edad, id);
         listaIntegrantes.add(nuevoIntegrante);
     }
 
@@ -49,4 +47,3 @@ public class iGrafica {
     
     }
 }
-

@@ -98,7 +98,6 @@ public class Interfaz extends javax.swing.JFrame {
         }
         // pedir el sexo
         String sexoStr = JOptionPane.showInputDialog("Ingrese su sexo:");
-        String sexo = Integer.parseString(sexoStr);
 
         // Pedir la edad
         String edadStr = JOptionPane.showInputDialog("Ingrese su edad:");
