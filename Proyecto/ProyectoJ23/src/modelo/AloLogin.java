@@ -8,14 +8,9 @@ package modelo;
  *
  * @author Diego
  */
-public class maint {
-    
-    public static void main(String[] args) {
-        
-        BaseDeJugadores db = new BaseDeJugadores();
-        
-        for (Jugadores jugador : db.getJugadores()) {
-            jugador.JugadorDatos();
-        }
+public class AloLogin {
+
+    public AloLogin() {
     }
+    
 }

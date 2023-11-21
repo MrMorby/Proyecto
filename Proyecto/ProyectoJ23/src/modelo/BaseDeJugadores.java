@@ -63,11 +63,11 @@ public class BaseDeJugadores {
         this.Usuario.add(new Usuario(2, "123123123", "Luis", "Malebran", "", "Luis123"));
         
         //Colecciones
-        this.colecciones.add("Reserva");
-        this.colecciones.add("General");
-        this.colecciones.add("Ingeniería");
-        this.colecciones.add("Clásicos");
-        this.colecciones.add("Literatura Juvenil");
+        this.colecciones.add("Delantero");
+        this.colecciones.add("Central");
+        this.colecciones.add("Arquero");
+        this.colecciones.add("Lateral");
+        this.colecciones.add("Defensa");
 
     }
 
