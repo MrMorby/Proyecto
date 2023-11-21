@@ -9,9 +9,8 @@ package modelo;
  * @author Diego
  */
 public class Usuario {
-    // AQUI HAREMOS LOS LOG Y ETC
+    
     private int id;
-    private String rut;
     private String nombre;
     private String apellido;
     private String user;
@@ -20,9 +19,9 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(int id, String rut, String nombre, String apellido, String user, String contraseña) {
+    public Usuario(int id, String nombre, String apellido, String user, String contraseña) {
         this.id = id;
-        this.rut = rut;
+
         this.nombre = nombre;
         this.apellido = apellido;
         this.user = user;
@@ -36,15 +35,6 @@ public class Usuario {
     public void setId(int id) {
         this.id = id;
     }
-
-    public String getRut() {
-        return rut;
-    }
-
-    public void setRut(String rut) {
-        this.rut = rut;
-    }
-
     public String getNombre() {
         return nombre;
     }
@@ -79,8 +69,7 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario{" + "id=" + id + ", rut=" + rut + ", nombre=" + nombre + ", apellido=" + apellido + ", user=" + user + ", contrase\u00f1a=" + contraseña + '}';
+        return "Usuario{" + "id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", user=" + user + ", contrase\u00f1a=" + contraseña + '}';
     }
-    
-    
+ 
 }
