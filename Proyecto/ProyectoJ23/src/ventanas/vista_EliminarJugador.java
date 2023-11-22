@@ -58,6 +58,10 @@ public class vista_EliminarJugador extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
+        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
+
+        jPanel8.setBackground(new java.awt.Color(153, 153, 255));
+
         jButton_buscarId.setText("Buscar");
         jButton_buscarId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,7 +98,7 @@ public class vista_EliminarJugador extends javax.swing.JFrame {
             }
         });
 
-        jButton_SalirMenEliminar.setText("Salir");
+        jButton_SalirMenEliminar.setText("Volver");
         jButton_SalirMenEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_SalirMenEliminarActionPerformed(evt);
@@ -111,17 +115,17 @@ public class vista_EliminarJugador extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 883, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGap(283, 283, 283)
-                        .addComponent(jButton_Eliminar)
-                        .addGap(110, 110, 110)
-                        .addComponent(jButton_SalirMenEliminar))
-                    .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGap(179, 179, 179)
                         .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jText_Idbusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(55, 55, 55)
-                        .addComponent(jButton_buscarId)))
+                        .addComponent(jButton_buscarId))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(221, 221, 221)
+                        .addComponent(jButton_Eliminar)
+                        .addGap(161, 161, 161)
+                        .addComponent(jButton_SalirMenEliminar)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
@@ -133,12 +137,12 @@ public class vista_EliminarJugador extends javax.swing.JFrame {
                     .addComponent(jText_Idbusqueda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton_buscarId))
                 .addGap(50, 50, 50)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton_Eliminar)
                     .addComponent(jButton_SalirMenEliminar))
-                .addContainerGap(165, Short.MAX_VALUE))
+                .addGap(62, 62, 62))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -149,7 +153,7 @@ public class vista_EliminarJugador extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, 895, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         jPanel2Layout.setVerticalGroup(
@@ -235,6 +239,8 @@ try {
     }//GEN-LAST:event_jButton_EliminarActionPerformed
 
     private void jButton_SalirMenEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SalirMenEliminarActionPerformed
+        JPingresar mForm9 = new JPingresar();
+        mForm9.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton_SalirMenEliminarActionPerformed
 

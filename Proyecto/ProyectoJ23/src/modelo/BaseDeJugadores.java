@@ -59,8 +59,8 @@ public class BaseDeJugadores {
         this.Jugadores.add(new Jugadores("Sergio", "Ramos", "Masculino", 42, 3));
 
         //Datos de Bibliotecarios
-        this.Usuario.add(new Usuario(1, "217529158", "Diego", "Acevedo", "MrMorby", "Diego123"));
-        this.Usuario.add(new Usuario(2, "123123123", "Luis", "Malebran", "", "Luis123"));
+        this.Usuario.add(new Usuario(1, "Diego", "Acevedo", "MrMorby", "Diego123"));
+        this.Usuario.add(new Usuario(2, "Luis", "Malebran", "", "Luis123"));
         
         //Colecciones
         this.colecciones.add("Delantero");

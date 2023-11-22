@@ -42,8 +42,8 @@ public Image getIconImage2() {
    public Interfaz() {
         initComponents();
         this.setTitle("LoginInicial");
-
-
+        LimpiarUSER();
+        LimpiarContrasenia();
    }
     /** private DataBase db;
        this.db = new DataBase();
@@ -121,6 +121,12 @@ public Image getIconImage2() {
             }
         });
 
+        CONTRASENIA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CONTRASENIAActionPerformed(evt);
+            }
+        });
+
         LIMPIAR_USER.setText("jButton1");
         LIMPIAR_USER.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -129,6 +135,11 @@ public Image getIconImage2() {
         });
 
         LIMPIAR_CONTRA.setText("jButton2");
+        LIMPIAR_CONTRA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LIMPIAR_CONTRAActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("limpiar");
 
@@ -258,6 +269,7 @@ public Image getIconImage2() {
         JPingresar mForm1 = new JPingresar();
         mForm1.setDato(USUARIO.getText());
         mForm1.setVisible(true);
+        this.dispose();
         
     }//GEN-LAST:event_jButton_IngresoActionPerformed
 
@@ -265,7 +277,6 @@ public Image getIconImage2() {
         // CREAR USUARIO
         CreacionUsuario mForm2 = new CreacionUsuario();
         mForm2.setVisible(true);
-        
         
     }//GEN-LAST:event_jButton_CreacionUsuarioActionPerformed
 
@@ -283,7 +294,17 @@ public Image getIconImage2() {
 
     private void LIMPIAR_USERActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LIMPIAR_USERActionPerformed
         // TODO add your handling code here:
+        LimpiarUSER();
     }//GEN-LAST:event_LIMPIAR_USERActionPerformed
+
+    private void LIMPIAR_CONTRAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LIMPIAR_CONTRAActionPerformed
+        // TODO add your handling code here:
+        LimpiarContrasenia();
+    }//GEN-LAST:event_LIMPIAR_CONTRAActionPerformed
+
+    private void CONTRASENIAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CONTRASENIAActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CONTRASENIAActionPerformed
 
     /**
      * @param args the command line arguments
@@ -339,4 +360,12 @@ public Image getIconImage2() {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPasswordField jPasswordField1;
     // End of variables declaration//GEN-END:variables
+
+    private void LimpiarUSER() {
+        USUARIO.setText("");
+    }
+
+    private void LimpiarContrasenia() {
+        CONTRASENIA.setText("");
+    }
 }

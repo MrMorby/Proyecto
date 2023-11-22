@@ -194,6 +194,9 @@
           </Events>
         </Component>
         <Component class="javax.swing.JPasswordField" name="CONTRASENIA">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CONTRASENIAActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="LIMPIAR_USER">
           <Properties>
@@ -207,6 +210,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton2"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LIMPIAR_CONTRAActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
