@@ -10,6 +10,8 @@ import java.awt.Toolkit;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import ventanas.CreacionUsuario;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  *
@@ -17,7 +19,6 @@ import ventanas.CreacionUsuario;
  */
 public class Interfaz extends javax.swing.JFrame {
 
-    
 @Override
 public Image getIconImage() {
    Image retValue = Toolkit.getDefaultToolkit().
@@ -62,14 +63,14 @@ public Image getIconImage2() {
         jPanel1 = new javax.swing.JPanel();
         jImagenPerfil = new javax.swing.JLabel();
         jBienvenido = new javax.swing.JLabel();
-        TXTUSER = new javax.swing.JTextField();
+        USUARIO = new javax.swing.JTextField();
         jLabel_Usuario = new javax.swing.JLabel();
         jLabel_Contrasenna = new javax.swing.JLabel();
         jButton_Ingreso = new javax.swing.JButton();
         jButton_CreacionUsuario = new javax.swing.JButton();
-        jPasswordField2 = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        CONTRASENIA = new javax.swing.JPasswordField();
+        LIMPIAR_USER = new javax.swing.JButton();
+        LIMPIAR_CONTRA = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -90,9 +91,9 @@ public Image getIconImage2() {
         jBienvenido.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jBienvenido.setText("BIENVENIDO");
 
-        TXTUSER.addActionListener(new java.awt.event.ActionListener() {
+        USUARIO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TXTUSERActionPerformed(evt);
+                USUARIOActionPerformed(evt);
             }
         });
 
@@ -120,9 +121,14 @@ public Image getIconImage2() {
             }
         });
 
-        jButton1.setText("jButton1");
+        LIMPIAR_USER.setText("jButton1");
+        LIMPIAR_USER.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LIMPIAR_USERActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("jButton2");
+        LIMPIAR_CONTRA.setText("jButton2");
 
         jLabel2.setText("limpiar");
 
@@ -147,8 +153,8 @@ public Image getIconImage2() {
                                     .addComponent(jLabel_Usuario))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(TXTUSER)
-                                    .addComponent(jPasswordField2, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)))
+                                    .addComponent(USUARIO)
+                                    .addComponent(CONTRASENIA, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)))
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jButton_CreacionUsuario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jButton_Ingreso, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -156,8 +162,8 @@ public Image getIconImage2() {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)))
+                                .addComponent(LIMPIAR_USER, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(LIMPIAR_CONTRA, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -172,15 +178,15 @@ public Image getIconImage2() {
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(TXTUSER, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(USUARIO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel_Usuario)
-                            .addComponent(jButton1))
+                            .addComponent(LIMPIAR_USER))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel_Contrasenna)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton2)))
+                                .addComponent(CONTRASENIA, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(LIMPIAR_CONTRA)))
                         .addGap(18, 18, 18)
                         .addComponent(jButton_Ingreso)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -243,14 +249,14 @@ public Image getIconImage2() {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void TXTUSERActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TXTUSERActionPerformed
+    private void USUARIOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_USUARIOActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_TXTUSERActionPerformed
+    }//GEN-LAST:event_USUARIOActionPerformed
 
     private void jButton_IngresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_IngresoActionPerformed
         //INGRESAR BOTON :D
         JPingresar mForm1 = new JPingresar();
-        mForm1.setDato(TXTUSER.getText());
+        mForm1.setDato(USUARIO.getText());
         mForm1.setVisible(true);
         
     }//GEN-LAST:event_jButton_IngresoActionPerformed
@@ -274,6 +280,10 @@ public Image getIconImage2() {
         // CERRAR PROGRAMA
         System.exit(0);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void LIMPIAR_USERActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LIMPIAR_USERActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LIMPIAR_USERActionPerformed
 
     /**
      * @param args the command line arguments
@@ -311,10 +321,11 @@ public Image getIconImage2() {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField TXTUSER;
+    private javax.swing.JPasswordField CONTRASENIA;
+    private javax.swing.JButton LIMPIAR_CONTRA;
+    private javax.swing.JButton LIMPIAR_USER;
+    private javax.swing.JTextField USUARIO;
     private javax.swing.JLabel jBienvenido;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton_CreacionUsuario;
     private javax.swing.JButton jButton_Ingreso;
@@ -327,6 +338,5 @@ public Image getIconImage2() {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField2;
     // End of variables declaration//GEN-END:variables
 }

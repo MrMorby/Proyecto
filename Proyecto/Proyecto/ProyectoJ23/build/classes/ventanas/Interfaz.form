@@ -84,8 +84,8 @@
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="TXTUSER" max="32767" attributes="0"/>
-                                      <Component id="jPasswordField2" pref="171" max="32767" attributes="0"/>
+                                      <Component id="USUARIO" max="32767" attributes="0"/>
+                                      <Component id="CONTRASENIA" pref="171" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
@@ -97,8 +97,8 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jButton1" min="-2" pref="38" max="-2" attributes="0"/>
-                                  <Component id="jButton2" pref="0" max="32767" attributes="0"/>
+                                  <Component id="LIMPIAR_USER" min="-2" pref="38" max="-2" attributes="0"/>
+                                  <Component id="LIMPIAR_CONTRA" pref="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
@@ -119,16 +119,16 @@
                           <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="TXTUSER" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="USUARIO" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel_Usuario" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="LIMPIAR_USER" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Component id="jLabel_Contrasenna" min="-2" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jPasswordField2" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="CONTRASENIA" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                  <Component id="LIMPIAR_CONTRA" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -158,9 +158,9 @@
             <Property name="text" type="java.lang.String" value="BIENVENIDO"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="TXTUSER">
+        <Component class="javax.swing.JTextField" name="USUARIO">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TXTUSERActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="USUARIOActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel_Usuario">
@@ -193,14 +193,17 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_CreacionUsuarioActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="jPasswordField2">
+        <Component class="javax.swing.JPasswordField" name="CONTRASENIA">
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="LIMPIAR_USER">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton1"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LIMPIAR_USERActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="LIMPIAR_CONTRA">
           <Properties>
             <Property name="text" type="java.lang.String" value="jButton2"/>
           </Properties>
