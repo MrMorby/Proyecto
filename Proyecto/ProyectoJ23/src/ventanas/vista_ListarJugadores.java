@@ -281,12 +281,28 @@ public class vista_ListarJugadores extends javax.swing.JFrame {
     }//GEN-LAST:event_jCombobox_EleccionBusquedaActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        // TODO add your handling code here:
-        vista_EditarJugador mForm12 = new vista_EditarJugador();
-        mForm12.setVisible(true);
-        dispose();
+        try {
+            // TODO add your handling code here:
+            DefaultTableModel modelo = (DefaultTableModel) this.jTbl_tablafiltroquemeenseñoahacerdonGabrielcreo.getModel();
+            int id  = (Integer) modelo.getValueAt(jTbl_tablafiltroquemeenseñoahacerdonGabrielcreo.getSelectedRow(), 4);
+            ListarJugador regJug = new ListarJugador();
+            List<Jugador> lista = regJug.buscarJugadorId(id);
+            
+            
+            new vista_EditarJugador().setVisible(true);
+            for (Jugador j : lista) {
+            int id = Integer.parseInt(this.AniEdad.getText());
+            vista_EditarJugador.jText_BuscarId.setText(j.getId().toString());
+            vista_EditarJugador.jText_NombreEdit.setText(j.getNombre());
+            vista_EditarJugador.jText_ApellidoEdit.setText(j.getApellido());
+            vista_EditarJugador.jComboBox_SexoEdit.setSelectedItem(j.getSexo());
+    //        vista_EditarJugador.jTextField1.setText(j.getEdad().toString());
+            }
+            dispose();
+        } catch (Exception ex) {
+            Logger.getLogger(vista_ListarJugadores.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jMenuItem1ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

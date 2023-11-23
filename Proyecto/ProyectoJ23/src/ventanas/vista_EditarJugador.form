@@ -94,7 +94,7 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel167" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                                      <Component id="jComboBox13" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jComboBox_SexoEdit" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="494" max="-2" attributes="0"/>
                                       <Component id="jLabel165" min="-2" max="-2" attributes="0"/>
                                   </Group>
@@ -119,7 +119,7 @@
                                   <Group type="102" alignment="0" attributes="0">
                                       <Component id="jLabel172" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jtxt_nombre13" min="-2" pref="185" max="-2" attributes="0"/>
+                                      <Component id="jText_NombreEdit" min="-2" pref="185" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="139" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Component id="jLabel168" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -127,8 +127,8 @@
                                       </Group>
                                       <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jTextField1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jtxt_aPaterno13" min="-2" pref="185" max="-2" attributes="0"/>
+                                          <Component id="jText_ApellidoEdit" min="-2" pref="185" max="-2" attributes="0"/>
+                                          <Component id="jText_EdadEdit" min="-2" pref="87" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -166,17 +166,17 @@
                       <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel172" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jtxt_aPaterno13" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jText_ApellidoEdit" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel168" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                          <Component id="jtxt_nombre13" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jText_NombreEdit" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel167" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel165" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jComboBox13" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                          <Component id="jComboBox_SexoEdit" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                           <Component id="jLabel174" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jText_EdadEdit" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -236,9 +236,12 @@
                 <Property name="text" type="java.lang.String" value="Nombre:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jtxt_aPaterno13">
+            <Component class="javax.swing.JTextField" name="jText_ApellidoEdit">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+              </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="jtxt_nombre13">
+            <Component class="javax.swing.JTextField" name="jText_NombreEdit">
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
               </AuxValues>
@@ -281,13 +284,16 @@
               <Properties>
                 <Property name="enabled" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jText_BuscarIdActionPerformed"/>
+              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
               </AuxValues>
             </Component>
             <Component class="javax.swing.JSeparator" name="jSeparator12">
             </Component>
-            <Component class="javax.swing.JComboBox" name="jComboBox13">
+            <Component class="javax.swing.JComboBox" name="jComboBox_SexoEdit">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="4">
@@ -303,9 +309,9 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField1">
+            <Component class="javax.swing.JTextField" name="jText_EdadEdit">
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jText_EdadEditActionPerformed"/>
               </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>

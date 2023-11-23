@@ -34,8 +34,8 @@ public class vista_EditarJugador extends javax.swing.JFrame {
         jLabel171 = new javax.swing.JLabel();
         jcmbo_region13 = new javax.swing.JComboBox<>();
         jLabel172 = new javax.swing.JLabel();
-        jtxt_aPaterno13 = new javax.swing.JTextField();
-        jtxt_nombre13 = new javax.swing.JTextField();
+        jText_ApellidoEdit = new javax.swing.JTextField();
+        jText_NombreEdit = new javax.swing.JTextField();
         jbtn_guardar13 = new javax.swing.JButton();
         jbtn_borrar13 = new javax.swing.JButton();
         jbtn_salir13 = new javax.swing.JButton();
@@ -43,8 +43,8 @@ public class vista_EditarJugador extends javax.swing.JFrame {
         jLabel175 = new javax.swing.JLabel();
         jText_BuscarId = new javax.swing.JTextField();
         jSeparator12 = new javax.swing.JSeparator();
-        jComboBox13 = new javax.swing.JComboBox<>();
-        jTextField1 = new javax.swing.JTextField();
+        jComboBox_SexoEdit = new javax.swing.JComboBox<>();
+        jText_EdadEdit = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -95,12 +95,17 @@ public class vista_EditarJugador extends javax.swing.JFrame {
         jLabel175.setText("Id Jugador");
 
         jText_BuscarId.setEnabled(false);
-
-        jComboBox13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Femenino", "Si", "Tal vez" }));
-
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jText_BuscarId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jText_BuscarIdActionPerformed(evt);
+            }
+        });
+
+        jComboBox_SexoEdit.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Masculino", "Femenino", "Si", "Tal vez" }));
+
+        jText_EdadEdit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jText_EdadEditActionPerformed(evt);
             }
         });
 
@@ -124,7 +129,7 @@ public class vista_EditarJugador extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel18Layout.createSequentialGroup()
                                 .addComponent(jLabel167)
                                 .addGap(40, 40, 40)
-                                .addComponent(jComboBox13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jComboBox_SexoEdit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(494, 494, 494)
                                 .addComponent(jLabel165))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel18Layout.createSequentialGroup()
@@ -144,15 +149,15 @@ public class vista_EditarJugador extends javax.swing.JFrame {
                             .addGroup(jPanel18Layout.createSequentialGroup()
                                 .addComponent(jLabel172)
                                 .addGap(18, 18, 18)
-                                .addComponent(jtxt_nombre13, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jText_NombreEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(139, 139, 139)
                                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel168)
                                     .addComponent(jLabel174))
                                 .addGap(28, 28, 28)
                                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jtxt_aPaterno13, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(jText_ApellidoEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jText_EdadEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(jPanel18Layout.createSequentialGroup()
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -178,16 +183,16 @@ public class vista_EditarJugador extends javax.swing.JFrame {
                 .addGap(21, 21, 21)
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel172)
-                    .addComponent(jtxt_aPaterno13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jText_ApellidoEdit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel168, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtxt_nombre13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jText_NombreEdit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(15, 15, 15)
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel167)
                     .addComponent(jLabel165)
-                    .addComponent(jComboBox13, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox_SexoEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel174)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jText_EdadEdit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(70, 70, 70)
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbtn_borrar13)
@@ -262,15 +267,19 @@ public class vista_EditarJugador extends javax.swing.JFrame {
          
     }//GEN-LAST:event_jbtn_guardar13ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jText_EdadEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jText_EdadEditActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jText_EdadEditActionPerformed
+
+    private void jText_BuscarIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jText_BuscarIdActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jText_BuscarIdActionPerformed
 
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    public static javax.swing.JComboBox<String> jComboBox13;
+    public static javax.swing.JComboBox<String> jComboBox_SexoEdit;
     private javax.swing.JLabel jLabel165;
     private javax.swing.JLabel jLabel167;
     private javax.swing.JLabel jLabel168;
@@ -281,13 +290,13 @@ public class vista_EditarJugador extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel18;
     private javax.swing.JSeparator jSeparator12;
-    public static javax.swing.JTextField jTextField1;
+    public static javax.swing.JTextField jText_ApellidoEdit;
     public static javax.swing.JTextField jText_BuscarId;
+    public static javax.swing.JTextField jText_EdadEdit;
+    public static javax.swing.JTextField jText_NombreEdit;
     private javax.swing.JButton jbtn_borrar13;
     private javax.swing.JButton jbtn_guardar13;
     private javax.swing.JButton jbtn_salir13;
     private javax.swing.JComboBox<String> jcmbo_region13;
-    private javax.swing.JTextField jtxt_aPaterno13;
-    public static javax.swing.JTextField jtxt_nombre13;
     // End of variables declaration//GEN-END:variables
 }
