@@ -56,19 +56,18 @@ public class ListarJugador {
         return jugador;
     }
      
-          public ArrayList<Jugador> buscarTodos() throws Exception
-    {
-        ArrayList<Jugador> lista = new ArrayList<>();
+          public List<Jugador> buscarTodos() throws Exception  {
+        List<Jugador> lista = new ArrayList<>();
         try {
             Conexion con = new Conexion();
             //Connection cnx = con.obtenerConexionOracle();
             Connection cnx = con.obtenerConexionOracle();
-            
+
             String query = "Select * from jugador ORDER by nombre";
             PreparedStatement stmt = cnx.prepareStatement(query);
-                        
+
             ResultSet rs = stmt.executeQuery();
-            
+
             while (rs.next()) {
                 Jugador jugador = new Jugador();
                 jugador.setId(rs.getInt("id"));
@@ -78,16 +77,16 @@ public class ListarJugador {
                 jugador.setEdad(rs.getInt("edad"));
                 lista.add(jugador);
             }
-            
-            
+
+
             rs.close();
             stmt.close();
             cnx.close();
-           
-            
+
+
         } catch (SQLException e) {
             System.out.println("Error SQL al consultar por jugadores " + e.getMessage());
-         
+
         }
         return lista;
     }

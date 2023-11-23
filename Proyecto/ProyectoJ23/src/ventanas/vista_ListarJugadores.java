@@ -5,6 +5,8 @@
 package ventanas;
 
 import Controlador.ListarJugador;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.table.DefaultTableModel;
@@ -19,8 +21,9 @@ public class vista_ListarJugadores extends javax.swing.JFrame {
     /**
      * Creates new form Listar
      */
-    public vista_ListarJugadores() {
+    public vista_ListarJugadores() throws Exception {
         initComponents();
+        ConsultarJugador();
     }
 
     /**
@@ -32,6 +35,8 @@ public class vista_ListarJugadores extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPopupMenu1 = new javax.swing.JPopupMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jPanel6 = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
         jtxt_busqueda = new javax.swing.JTextField();
@@ -41,6 +46,14 @@ public class vista_ListarJugadores extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTbl_tablafiltroquemeenseñoahacerdonGabrielcreo = new javax.swing.JTable();
         jCombobox_EleccionBusqueda = new javax.swing.JComboBox<>();
+
+        jMenuItem1.setText("Editar Jugador");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jPopupMenu1.add(jMenuItem1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -81,6 +94,8 @@ public class vista_ListarJugadores extends javax.swing.JFrame {
                 "Nombre", "Apellido", "Sexo", "Edad", "Id"
             }
         ));
+        jTbl_tablafiltroquemeenseñoahacerdonGabrielcreo.setComponentPopupMenu(jPopupMenu1);
+        jTbl_tablafiltroquemeenseñoahacerdonGabrielcreo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jScrollPane1.setViewportView(jTbl_tablafiltroquemeenseñoahacerdonGabrielcreo);
 
         jScrollPane4.setViewportView(jScrollPane1);
@@ -265,53 +280,49 @@ public class vista_ListarJugadores extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jCombobox_EleccionBusquedaActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(vista_ListarJugadores.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(vista_ListarJugadores.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(vista_ListarJugadores.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(vista_ListarJugadores.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+        vista_EditarJugador mForm12 = new vista_EditarJugador();
+        mForm12.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new vista_ListarJugadores().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jCombobox_EleccionBusqueda;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTable jTbl_tablafiltroquemeenseñoahacerdonGabrielcreo;
     private javax.swing.JButton jbttn_buscarFiltro;
     private javax.swing.JTextField jtxt_busqueda;
     // End of variables declaration//GEN-END:variables
+
+private void ConsultarJugador() throws Exception{
+        
+        DefaultTableModel modelo = (DefaultTableModel) this.jTbl_tablafiltroquemeenseñoahacerdonGabrielcreo.getModel();
+        modelo.setRowCount(0);
+        
+        ListarJugador regJug = new ListarJugador();
+        
+        List<Jugador> lista = regJug.buscarTodos();
+         Object[] datos = new Object[5];
+        modelo = (DefaultTableModel) jTbl_tablafiltroquemeenseñoahacerdonGabrielcreo.getModel();
+        
+        for (Jugador j : lista){
+            datos[0] = j.getNombre();
+            datos[1] = j.getApellido();
+            datos[2] = j.getSexo();
+            datos[3] = j.getEdad();
+            datos[4] = j.getId();
+            modelo.addRow(datos);
+        
+        }
+
+    }
+
 }
