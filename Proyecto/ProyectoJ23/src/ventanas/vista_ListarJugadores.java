@@ -291,12 +291,11 @@ public class vista_ListarJugadores extends javax.swing.JFrame {
             
             new vista_EditarJugador().setVisible(true);
             for (Jugador j : lista) {
-            int id = Integer.parseInt(this.AniEdad.getText());
-            vista_EditarJugador.jText_BuscarId.setText(j.getId().toString());
+            vista_EditarJugador.jText_BuscarId.setText(j.getId()+"");
             vista_EditarJugador.jText_NombreEdit.setText(j.getNombre());
             vista_EditarJugador.jText_ApellidoEdit.setText(j.getApellido());
             vista_EditarJugador.jComboBox_SexoEdit.setSelectedItem(j.getSexo());
-    //        vista_EditarJugador.jTextField1.setText(j.getEdad().toString());
+            vista_EditarJugador.jText_EdadEdit.setText(String.valueOf(j.getEdad()));
             }
             dispose();
         } catch (Exception ex) {

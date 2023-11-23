@@ -4,6 +4,11 @@
  */
 package ventanas;
 
+import modelo.Jugador;
+import Controlador.EditarJugador;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Sergi
@@ -36,7 +41,7 @@ public class vista_EditarJugador extends javax.swing.JFrame {
         jLabel172 = new javax.swing.JLabel();
         jText_ApellidoEdit = new javax.swing.JTextField();
         jText_NombreEdit = new javax.swing.JTextField();
-        jbtn_guardar13 = new javax.swing.JButton();
+        jButton_GuardarEdit = new javax.swing.JButton();
         jbtn_borrar13 = new javax.swing.JButton();
         jbtn_salir13 = new javax.swing.JButton();
         jLabel174 = new javax.swing.JLabel();
@@ -69,10 +74,10 @@ public class vista_EditarJugador extends javax.swing.JFrame {
 
         jLabel172.setText("Nombre:");
 
-        jbtn_guardar13.setText("Guardar cambios");
-        jbtn_guardar13.addActionListener(new java.awt.event.ActionListener() {
+        jButton_GuardarEdit.setText("Guardar cambios");
+        jButton_GuardarEdit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtn_guardar13ActionPerformed(evt);
+                jButton_GuardarEditActionPerformed(evt);
             }
         });
 
@@ -163,7 +168,7 @@ public class vista_EditarJugador extends javax.swing.JFrame {
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel18Layout.createSequentialGroup()
                         .addGap(176, 176, 176)
-                        .addComponent(jbtn_guardar13)
+                        .addComponent(jButton_GuardarEdit)
                         .addGap(140, 140, 140)
                         .addComponent(jbtn_borrar13))
                     .addGroup(jPanel18Layout.createSequentialGroup()
@@ -196,7 +201,7 @@ public class vista_EditarJugador extends javax.swing.JFrame {
                 .addGap(70, 70, 70)
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbtn_borrar13)
-                    .addComponent(jbtn_guardar13))
+                    .addComponent(jButton_GuardarEdit))
                 .addGap(1, 1, 1)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(24, 24, 24)
@@ -232,7 +237,7 @@ public class vista_EditarJugador extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -262,10 +267,25 @@ public class vista_EditarJugador extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jbtn_borrar13ActionPerformed
 
-    private void jbtn_guardar13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_guardar13ActionPerformed
+    private void jButton_GuardarEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_GuardarEditActionPerformed
         
+        try {
+            EditarJugador editJug = new EditarJugador();
+            Jugador jugador = new Jugador();
+            
+                jugador.setNombre(jText_NombreEdit.getText());
+                jugador.setApellido(jText_ApellidoEdit.getText());
+                jugador.setSexo((String) jComboBox_SexoEdit.getSelectedItem());
+                jugador.setEdad(Integer.parseInt(jText_EdadEdit.getText()));
+                jugador.setId(Integer.parseInt(jText_BuscarId.getText()));
+            
+            
+            editJug.editarJugador(jugador);
+        } catch (Exception ex) {
+            Logger.getLogger(vista_EditarJugador.class.getName()).log(Level.SEVERE, null, ex);
+        }
          
-    }//GEN-LAST:event_jbtn_guardar13ActionPerformed
+    }//GEN-LAST:event_jButton_GuardarEditActionPerformed
 
     private void jText_EdadEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jText_EdadEditActionPerformed
         // TODO add your handling code here:
@@ -276,9 +296,9 @@ public class vista_EditarJugador extends javax.swing.JFrame {
     }//GEN-LAST:event_jText_BuscarIdActionPerformed
 
 
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton_GuardarEdit;
     public static javax.swing.JComboBox<String> jComboBox_SexoEdit;
     private javax.swing.JLabel jLabel165;
     private javax.swing.JLabel jLabel167;
@@ -295,7 +315,6 @@ public class vista_EditarJugador extends javax.swing.JFrame {
     public static javax.swing.JTextField jText_EdadEdit;
     public static javax.swing.JTextField jText_NombreEdit;
     private javax.swing.JButton jbtn_borrar13;
-    private javax.swing.JButton jbtn_guardar13;
     private javax.swing.JButton jbtn_salir13;
     private javax.swing.JComboBox<String> jcmbo_region13;
     // End of variables declaration//GEN-END:variables

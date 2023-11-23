@@ -19,30 +19,25 @@ public class EditarJugador {
     
 //    Update query conexion por cada dato de columna per jugador
     
-    public Jugador editarJugador(int id) throws Exception
+    public Jugador editarJugador(Jugador jugador) throws Exception
     {
-        Jugador jugador = new Jugador();
-        try {
             Conexion con = new Conexion();
             //Connection cnx = con.obtenerConexion();
             Connection cnx = con.obtenerConexionOracle();
             String query = "UPDATE jugador SET nombre = ?, apellido = ?, sexo = ?, edad = ?  WHERE id = ?" ;
-        //Se carga la plantilla de sentencia
+
+        try {
+            
+            
             PreparedStatement stmt = cnx.prepareStatement(query);
-            stmt.setInt(1, id);
+            stmt.setString(1, jugador.getNombre());
+            stmt.setString(2, jugador.getApellido());
+            stmt.setString(3,jugador.getSexo());
+            stmt.setInt(4,jugador.getEdad());
+            stmt.setInt(5,jugador.getId());
+            
 
-            ResultSet rs = stmt.executeQuery();
-
-            if (rs.next()) {
-                jugador.setId(rs.getInt("id"));
-                jugador.setNombre(rs.getString("nombre"));
-                jugador.setApellido(rs.getString("apellido"));
-                jugador.setSexo(rs.getString("sexo"));
-                jugador.setEdad(rs.getInt("edad"));
-
-            }
-            // Cierre conexion
-            rs.close();
+            stmt.executeUpdate();
             stmt.close();
             cnx.close();
 
@@ -53,7 +48,5 @@ public class EditarJugador {
         }
 
         return jugador;
-
-
     }
 }

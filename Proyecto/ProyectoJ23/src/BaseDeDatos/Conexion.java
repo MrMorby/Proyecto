@@ -18,7 +18,7 @@ import java.util.Properties; // IMPORTACION DE ORACLE
 public class Conexion {
 
     // DE ACA COMIENZA LA CONEXION A ORACLE
-    private static final String WALLET_PATH = "C:\\Users\\Duoc\\Desktop\\Proyecto-main\\Proyecto-main\\Wallet_Basededatos";
+    private static final String WALLET_PATH = "C:\\Users\\fired\\Desktop\\Wallet_Basededatos";
     private static final String WALLET_PASSWORD = "Basededatos1.";
     private static final String JDBC_URL = "jdbc:oracle:thin:@basededatosproyectojava_high"; // - REEMPLAZA 'testdb_high' EN EL ARCHIVO TNSNAMES.ORA
 //                                                                                                    APARECE AL INICIO [NOMBRE DE LA DB]_HIGH";
