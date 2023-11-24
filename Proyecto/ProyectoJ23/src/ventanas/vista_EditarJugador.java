@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Sergi
+ * @author Diego
  */
 public class vista_EditarJugador extends javax.swing.JFrame {
 
