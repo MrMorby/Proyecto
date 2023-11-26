@@ -62,8 +62,9 @@ public class ListarJugador {
             Conexion con = new Conexion();
             //Connection cnx = con.obtenerConexionOracle();
             Connection cnx = con.obtenerConexionOracle();
-
-            String query = "Select * from jugador ORDER by nombre";
+            
+            
+            String query = "Select * from jugador ORDER by id"; // determinar orden de Salida en la tabla 
             PreparedStatement stmt = cnx.prepareStatement(query);
 
             ResultSet rs = stmt.executeQuery();
@@ -96,7 +97,6 @@ public class ListarJugador {
 
         try {
             Conexion con = new Conexion();
-            //Connection cnx = con.obtenerConexionOracle();
             Connection cnx = con.obtenerConexionOracle();
             
             String query = "SELECT * FROM jugador WHERE " + condicion + " = ?";
